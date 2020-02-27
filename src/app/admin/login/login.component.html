@@ -1,0 +1,49 @@
+<section class="login-container">
+    <section class="admin-login-form">
+        <div class="login-form-container">
+            <h1><strong>DK</strong> Portal</h1>
+
+            <form novalidate autocomplete="off" [formGroup]="loginFormGroup">
+                <p>LOGIN FORM</p>
+                <label for="admin_Login_email">Email</label>
+                <input type="email" id="admin_Login_email" formControlName="login_email" required [ngClass]="{ 'error': loginFormGroup.controls.login_email.dirty && loginFormGroup.controls.login_email.errors && (loginFormGroup.controls.login_email.errors.required || loginFormGroup.controls.login_email.errors.email)}"
+                />
+                <span class="error" *ngIf="loginFormGroup.controls.login_email.dirty && loginFormGroup.controls.login_email.errors && loginFormGroup.controls.login_email.errors.required">Please enter email</span>
+                <span class="error" *ngIf="loginFormGroup.controls.login_email.dirty && loginFormGroup.controls.login_email.errors && loginFormGroup.controls.login_email.errors.email">Please check your email</span>
+                <label for="admin_Login_password">Password</label>
+                <input type="password" id="admin_Login_password" formControlName="login_password" required/>
+                <span class="error" *ngIf="loginFormGroup.controls.login_password.errors && loginFormGroup.controls.login_password.errors.required">Please enter Password</span>
+                <button class="login-btn" (click)="do('login')">LOGIN</button>
+                <button (click)="goto('home')">Goto HOME</button>
+                <p>
+                    <span (click)="do('forgot')">Forgot Password?</span>
+                    <span class="sign-up-link" (click)="do('show-sign-up')">Do you want to Sign UP?</span>
+                </p>
+            </form>
+
+            <form novalidate autocomplete="off">
+                <p>FORGOT PASSWORD FORM</p>
+                <label for="admin_forgot_email">Email</label>
+                <input type="email" id="admin_forgot_email" />
+                <button class="login-btn" (click)="do('submit-forgot')">Submit</button>
+                <button (click)="goto('login')">Goto LOGIN</button>
+                <p>
+                    <span class="sign-up-link" (click)="do('show-sign-up')">Do you want to Sign UP?</span>
+                </p>
+            </form>
+
+            <form novalidate autocomplete="off">
+                <p>SIGN UP FORM</p>
+                <label for="admin_sign_user">User Name</label>
+                <input type="email" id="admin_sign_user" />
+                <label for="admin_sign_email">Email</label>
+                <input type="email" id="admin_sign_email" />
+                <button class="login-btn" (click)="do('signup')">SIGN UP</button>
+                <button (click)="goto('login')">Goto LOGIN</button>
+            </form>
+
+        </div>
+    </section>
+    <section class="admin-login-image"></section>
+    <div class="clear"></div>
+</section>

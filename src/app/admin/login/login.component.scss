@@ -1,0 +1,102 @@
+.login-container {
+    background-color: #000;
+}
+
+.admin-login-form {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    background: linear-gradient(90deg, rgba(5, 120, 143, 0.908000700280112) 0%, rgba(0, 0, 0, 0.7399334733893557) 49%);
+    position: relative;
+    .login-form-container {
+        width: 80%;
+        height: 500px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            strong {
+                font-size: 55px;
+            }
+        }
+        form {
+            margin-top: 20px;
+            padding: 25px;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            font-size: 20px;
+            label,
+            input {
+                width: calc(100% - 50px);
+                margin: 5px 0px;
+                background: transparent;
+                border: 0px;
+                color: #fff;
+                border-radius: 5px;
+            }
+            input {
+                border: 1px solid #fff;
+                padding: 5px 10px;
+            }
+            button {
+                color: #fff;
+                margin: 20px 0;
+                padding: 10px 20px;
+                background: transparent;
+                border: 0px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                font-weight: bold;
+            }
+            .login-btn {
+                margin-right: 20px;
+            }
+            button:hover {
+                background-color: #fff;
+                color: #000;
+            }
+            span {
+                font-size: 15px;
+                font-weight: normal;
+                color: #fff;
+            }
+            span:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .sign-up-link {
+                float: right;
+            }
+            p {
+                color: #fff;
+                font-weight: bold;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+.admin-login-image {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background: url("src/assets/images/login-bg.jpg") rgba(0, 0, 0, 0.7);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.error {
+    display: block;
+    color: red !important;
+}
